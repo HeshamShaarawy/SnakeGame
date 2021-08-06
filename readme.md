@@ -12,7 +12,7 @@ The game starts by a welcome screen:
 
 when the player press "s" the game starts: here is during playing the snake head is blue, the body is red, the food is yellow flashing circle. 
 
-![image of playing](assets/imgs4readme/playing.png)
+![image of playing](assets/imgs4readme/Playing.png)
 
 if the play achieve the goal score (displayed in the bottom of the game board); they are offered to either go to next level, restart the game or cancel(which is to see where they are at in the game)
 
@@ -30,16 +30,19 @@ Jquery
 
 # The game is playable at:
 
+github-pages: [View deployment](https://heshamshaarawy.github.io/SnakeGame/)
 
 # Next Steps: Planned future enhancements (icebox items).
  
- these are some of the ideas for leveling up the game:
+These are some of the ideas for leveling up the game:
 
- - Add touch as input for snake movement; so that the game can be played on touch screen devices
+ - Add touch-screen as input for snake movement; so that the game can be played on touch-screen devices
 
 - Enable user to change the game options like:
-    - change the snake speed
-    - turn-on poision food that the snake should not eat 
+    - change the snake speed.
+    - change styles of the game.
+- have gaming enhancements like:
+    - poison food when the snake eat, its game-over.
     - enable holes where the snake goes into one and come out of the other
 - Add Sound effects
 

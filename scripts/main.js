@@ -11,12 +11,6 @@ let drawBoard = 0
 let goal =  500
 let level
 
- 
-
-
-
-
-
 //creating the game board
 function setBoard() {
     $("#cover").fadeOut("slow",); 
@@ -28,7 +22,7 @@ function setBoard() {
     } drawBoard = 1
 }
 
-// drawing the snake function
+// drawing the snake
 function draw(){
     
     for(let i = 0; i <= snl; i++){
@@ -64,11 +58,7 @@ function move() {
         snake.unshift(newSegment)   
         $(`#${head}`).hasClass("food")? sollow() : snake.pop(snake[snl -1]) 
         draw()       
-        
 }
-
-
-
 //eating the food
 function sollow (){
     food()
@@ -76,11 +66,8 @@ function sollow (){
     $(`#score`).text(`${score}`) 
     if(score == goal){winning()}
     snl = snake.length -1
-    $(`#${head}`).removeClass("food")
-   
-        
+    $(`#${head}`).removeClass("food")        
 }
-
 //capturing the user keying
 document.onkeydown = function(e){
     userKey = (e.key)
@@ -106,14 +93,12 @@ document.onkeydown = function(e){
 
 //starting the game
 function start (){
-    if (drawBoard == 0){ setBoard()};
-    
+    if (drawBoard == 0){ setBoard()};  
     $(`#goal`).text(`${goal}`)
     $(`#speedvalue`).text(`${speed}`)
     draw()
     food()
-    gameON = window.setInterval(move, 1000/speed)
-    
+    gameON = window.setInterval(move, 1000/speed)  
 }
 
 // when the user achieve the goal score:
@@ -122,7 +107,7 @@ function  winning() {
     $('#winningMessage > div').text('WiNNeR')
     $("#nextLevel").css('display', 'flex')
     $(`#winningMessage`).addClass('show')
-    }
+}
 
 
 // offering to go to next level when the player achieve the goal score
@@ -131,16 +116,14 @@ $('#nextLevel').click( ()=> {
     goal += goal
     $("#nextLevel").css('display', 'none')
     $(`#winningMessage`).removeClass('show')
-    start()
-    
+    start()   
 })
 
 // lose : stopping the game and displaying a game over message
 function gameOver() {
     clearInterval(gameON)
     $('#winningMessage > div').text('Game Over')
-    $(`#winningMessage`).addClass('show')
-     
+    $(`#winningMessage`).addClass('show')     
  }
 // re-setting the game
 function resetVariables () {
@@ -170,6 +153,7 @@ $('#restartButton').click( ()=> {
     resetVariables()
     start();
     })
+//pressing cancel button, remove the winning message
 $('#cancelButton').click(() => {
     $(`#winningMessage`).removeClass('show')
 })
