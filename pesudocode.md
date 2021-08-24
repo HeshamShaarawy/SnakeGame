@@ -71,7 +71,7 @@
 
 
 # Open tickets
-    none
+- the food may appear at the same div of the snake. 
 # closed tickets
  - write the game rules
  - remove console.logs(snake array, food, out of board)

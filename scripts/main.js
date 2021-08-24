@@ -137,6 +137,7 @@ function resetVariables () {
     snl = snake.length -1
     head = `${snake[0][0]}0${snake[0][1]}`
     $(`#score`).text(`Zero`) 
+    let goal =  500
 }
 
 
